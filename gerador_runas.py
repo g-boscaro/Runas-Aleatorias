@@ -1,6 +1,6 @@
 #gerador de runas, provavelmente na sequencia do Uthark
 import random
-from PIL import Image
+#from PIL import Image
 
 runas_uthark = [
 #Primeiro Aetir
