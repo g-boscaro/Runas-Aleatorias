@@ -3,7 +3,6 @@ import random
 
 def geraRuna():    
     #definir variaveis locais
-    runa_significado = None
     runa_escolhida = None
     
     #Lista de runas
@@ -42,9 +41,10 @@ def geraRuna():
     #print(runas_list)
 
     #Passa os valores da runa escolhida para cada uma das variáveis
-    runa_significado , runa_escolhida = random.choice(runas_list)
+    runa_escolhida = random.choice(runas_list)
 
-    return(print(runa_significado, runa_escolhida))
+    return(runa_escolhida)
 
+runa_significado, runa_simbolo = geraRuna()
 
-geraRuna()
+print(runa_simbolo, runa_significado)
