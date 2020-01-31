@@ -1,46 +1,50 @@
 #gerador de runas, provavelmente na sequencia do Uthark
 import random
-#from PIL import Image
 
-runas_uthark = [
-#Primeiro Aetir
-    "Ur",
-    "Thurs",
-    "As",
-    "Raid",
-    "Ken",
-    "Gifu",
-    "Wynja",
-    "Hagal",
-#Segundo Aetir
-    "Naud",
-    "Is",
-    "Jara",
-    "Perthra",
-    "Eihwaz",
-    "Algiz",
-    "Sol",
-    "Tyr",
-#Terceiro Aetir
-    "Bjarka",
-    "Eh",
-    "Manaz",
-    "Laguz",
-    "Ing",
-    "Odal",
-    "Dagaz",
-    "Fehu"
-]
+def geraRuna():    
+    #definir variaveis locais
+    runa_significado = None
+    runa_escolhida = None
+    
+    #Lista de runas
+    dic_runas = {
+    #Primeiro Aetir
+        "Ur":"ᚢ",
+        "Thurs":"ᚦ",
+        "As":"ᚫ",
+        "Raid":"ᚱ",
+        "Ken":"ᚲ",
+        "Gifu":"ᚷ",
+        "Wynja":"ᚹ",
+        "Hagal":"ᚺ",
+    #Segundo Aetir
+        "Naud":"ᚾ",
+        "Is":"ᛁ",
+        "Jara":"ᛃ",
+        "Perthra":"ᛈ",
+        "Eihwaz":"ᛇ",
+        "Algiz":"ᛉ",
+        "Sol":"ᛋ",
+        "Tyr":"ᛏ",
+    #Terceiro Aetir
+        "Bjarka":"ᛒ",
+        "Eh":"ᛖ",
+        "Manaz":"ᛗ",
+        "Laguz":"ᛚ",
+        "Ing":"ᛜ",
+        "Odal":"ᛟ",
+        "Dagaz":"ᛞ",
+        "Fehu":	"ᚠ"
+    }
 
-#Misturar tres vezes, uma pra cada norna
-#Para Urd
-random.shuffle(runas_uthark)
-#Para Verdandi
-random.shuffle(runas_uthark)
-#Para Skuldi
-random.shuffle(runas_uthark)
+    #Transforma dicionario em lista
+    runas_list = list(dic_runas.items())
+    #print(runas_list)
 
-#Tira uma runa e a exclui da lista
-escolheRuna = random.choice(runas_uthark)
-runas_uthark.remove(escolheRuna)
-print(escolheRuna)
+    #Passa os valores da runa escolhida para cada uma das variáveis
+    runa_significado , runa_escolhida = random.choice(runas_list)
+
+    return(print(runa_significado, runa_escolhida))
+
+
+geraRuna()
